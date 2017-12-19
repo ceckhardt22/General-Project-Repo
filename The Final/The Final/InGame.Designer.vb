@@ -22,16 +22,36 @@ Partial Class frmInGame
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.picPlayer = New System.Windows.Forms.PictureBox()
+        CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'picPlayer
+        '
+        Me.picPlayer.BackColor = System.Drawing.Color.Transparent
+        Me.picPlayer.Image = Global.WindowsApplication1.My.Resources.Resources.player_sprite1__1_
+        Me.picPlayer.Location = New System.Drawing.Point(280, 390)
+        Me.picPlayer.Name = "picPlayer"
+        Me.picPlayer.Size = New System.Drawing.Size(142, 114)
+        Me.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picPlayer.TabIndex = 0
+        Me.picPlayer.TabStop = False
         '
         'frmInGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(693, 476)
+        Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.gamebackground
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(728, 501)
+        Me.Controls.Add(Me.picPlayer)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DoubleBuffered = True
         Me.Name = "frmInGame"
-        Me.Text = "Menu"
+        Me.Text = "InGame"
+        CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents picPlayer As System.Windows.Forms.PictureBox
 End Class

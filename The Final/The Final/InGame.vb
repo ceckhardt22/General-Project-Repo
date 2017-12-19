@@ -1,27 +1,31 @@
 ﻿Public Class frmInGame
 
-    'Integers
-    Private lives As Integer = 5                 ' Lives per game .. 
-    Private level As Integer = 1                 ' Starting level/current level the player is on ..
-    Private score As Integer                     ' Player score ..
-    Private highScore As Integer                 ' High score default ..
-    Private invaderEntryPath As Integer          ' Denotes which path the invaders will travel along ..
-    Private playerPivotPos As Integer = 61       ' Player piviot starting pos. ..
+    ' Player movement/direction declaration ...
+    Dim xdir As Integer
+    Dim ydir As Integer
 
-    'Booleans
-    Private moveKeyPress(2) As Boolean           ' Flags set true when player input requests to move the ship left / right
-    Private shootKeyPress As Boolean             ' Flag set when player shoots
-    Private shootKeyUP As Boolean                ' Flag set when player input key / button is released
-    Private levelCompleted As Boolean            ' Set when level has just been completed
-    Private AppRunning As Boolean = True         ' Set while app is running 
-    Private gameOver As Boolean = True           ' Set when game over ...
-    Private doingSOLevel As Boolean              ' Start of a new level then set
-    Private doingEOLevel As Boolean              ' End of a level then set ... 
-    Private doingSOGame As Boolean               ' Flasg set when doing the start of a new game 
-    Private playerExplosion As Boolean           ' Set when the player's ship is exploding
+    Private Sub InGame_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        Select Case e.KeyCode
+            Case Keys.W : ydir = -1
+            Case Keys.A : xdir = -1
+            Case Keys.S : ydir = 1
+            Case Keys.D : xdir = 1
+        End Select
+    End Sub
 
-    Private Sub InGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub InGame_KeyUp(sender As Object, e As KeyEventArgs) Handles MyBase.KeyUp
+        Select Case e.KeyCode
+            Case Keys.W : ydir = -1 Then ydir = 0
+            Case Keys.A : xdir = -1 Then xdir = 0
+            Case Keys.S : ydir = 1 Then ydir = 0
+            Case Keys.D : xdir = 1 Then xdir = 0
+        End Select
+    End Sub
 
+    Private Sub picPlayer_Click(sender As Object, e As EventArgs) Handles picPlayer.Click
+        Dim bmp As New Bitmap(picPlayer)
+        bmp.MakeTransparent(Color.White)
+        Me.picPlayer.BackColor = Color.Transparent
 
     End Sub
 End Class
