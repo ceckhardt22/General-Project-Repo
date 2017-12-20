@@ -22,7 +22,7 @@
         End Select
     End Sub
 
-    Private Sub picPlayer_Click(sender As Object, e As EventArgs) Handles picPlayer.Click
+    Private Sub picPlayer_Click(sender As Object, e As EventArgs)
         Dim bmp As New Bitmap(picPlayer)
         bmp.MakeTransparent(Color.White)
         Me.picPlayer.BackColor = Color.Transparent

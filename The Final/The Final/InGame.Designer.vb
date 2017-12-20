@@ -22,7 +22,6 @@ Partial Class frmInGame
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.picPlayer = New System.Windows.Forms.PictureBox()
         Me.picEnemy = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -32,7 +31,8 @@ Partial Class frmInGame
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.picEnemy, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,25 +42,15 @@ Partial Class frmInGame
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'picPlayer
-        '
-        Me.picPlayer.BackColor = System.Drawing.Color.Transparent
-        Me.picPlayer.Image = Global.WindowsApplication1.My.Resources.Resources.player_sprite1__1_
-        Me.picPlayer.Location = New System.Drawing.Point(293, 333)
-        Me.picPlayer.Name = "picPlayer"
-        Me.picPlayer.Size = New System.Drawing.Size(142, 114)
-        Me.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picPlayer.TabIndex = 0
-        Me.picPlayer.TabStop = False
         '
         'picEnemy
         '
         Me.picEnemy.BackColor = System.Drawing.Color.Transparent
         Me.picEnemy.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.picEnemy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.picEnemy.Location = New System.Drawing.Point(85, 37)
+        Me.picEnemy.Location = New System.Drawing.Point(52, 37)
         Me.picEnemy.Name = "picEnemy"
         Me.picEnemy.Size = New System.Drawing.Size(45, 42)
         Me.picEnemy.TabIndex = 1
@@ -71,7 +61,7 @@ Partial Class frmInGame
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(146, 37)
+        Me.PictureBox1.Location = New System.Drawing.Point(125, 37)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox1.TabIndex = 2
@@ -82,7 +72,7 @@ Partial Class frmInGame
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(209, 37)
+        Me.PictureBox2.Location = New System.Drawing.Point(194, 37)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox2.TabIndex = 3
@@ -104,7 +94,7 @@ Partial Class frmInGame
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(330, 37)
+        Me.PictureBox4.Location = New System.Drawing.Point(342, 37)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox4.TabIndex = 5
@@ -115,7 +105,7 @@ Partial Class frmInGame
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(390, 37)
+        Me.PictureBox5.Location = New System.Drawing.Point(409, 37)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox5.TabIndex = 6
@@ -126,7 +116,7 @@ Partial Class frmInGame
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox6.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(454, 37)
+        Me.PictureBox6.Location = New System.Drawing.Point(480, 37)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox6.TabIndex = 7
@@ -137,7 +127,7 @@ Partial Class frmInGame
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox7.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(519, 37)
+        Me.PictureBox7.Location = New System.Drawing.Point(556, 37)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox7.TabIndex = 8
@@ -148,11 +138,35 @@ Partial Class frmInGame
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox8.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.enemy_sprite1_11
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Location = New System.Drawing.Point(584, 37)
+        Me.PictureBox8.Location = New System.Drawing.Point(636, 37)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(45, 42)
         Me.PictureBox8.TabIndex = 9
         Me.PictureBox8.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Image = Global.WindowsApplication1.My.Resources.Resources.player_sprite1
+        Me.PictureBox9.Location = New System.Drawing.Point(342, 457)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(45, 51)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 10
+        Me.PictureBox9.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(679, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 21)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Label1"
         '
         'frmInGame
         '
@@ -160,7 +174,9 @@ Partial Class frmInGame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.gamebackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(728, 501)
+        Me.ClientSize = New System.Drawing.Size(743, 529)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
@@ -170,12 +186,10 @@ Partial Class frmInGame
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.picEnemy)
-        Me.Controls.Add(Me.picPlayer)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.DoubleBuffered = True
         Me.Name = "frmInGame"
         Me.Text = "InGame"
-        CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picEnemy, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -185,10 +199,11 @@ Partial Class frmInGame
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents picPlayer As System.Windows.Forms.PictureBox
     Friend WithEvents picEnemy As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
@@ -198,4 +213,6 @@ Partial Class frmInGame
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
