@@ -22,39 +22,27 @@ Partial Class StartMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnNew = New System.Windows.Forms.Label()
-        Me.btnLoad = New System.Windows.Forms.Label()
+        Me.btnStart = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Label()
         Me.picMainMenu = New System.Windows.Forms.PictureBox()
         CType(Me.picMainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnNew
+        'btnStart
         '
-        Me.btnNew.AutoSize = True
-        Me.btnNew.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btnNew.Location = New System.Drawing.Point(545, 235)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(62, 15)
-        Me.btnNew.TabIndex = 0
-        Me.btnNew.Text = "New Game"
-        Me.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnLoad
-        '
-        Me.btnLoad.AutoSize = True
-        Me.btnLoad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btnLoad.Location = New System.Drawing.Point(545, 285)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(64, 15)
-        Me.btnLoad.TabIndex = 1
-        Me.btnLoad.Text = "Load Game"
-        Me.btnLoad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnStart.AutoSize = True
+        Me.btnStart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.btnStart.Location = New System.Drawing.Point(545, 262)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(62, 15)
+        Me.btnStart.TabIndex = 0
+        Me.btnStart.Text = "New Game"
+        Me.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnExit
         '
         Me.btnExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btnExit.Location = New System.Drawing.Point(545, 335)
+        Me.btnExit.Location = New System.Drawing.Point(545, 305)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(62, 15)
         Me.btnExit.TabIndex = 2
@@ -64,7 +52,7 @@ Partial Class StartMenu
         '
         'picMainMenu
         '
-        Me.picMainMenu.Image = Global.WindowsApplication1.My.Resources.Resources.menu_background
+        Me.picMainMenu.Image = Global.WindowsApplication1.My.Resources.Resources.menubackground
         Me.picMainMenu.InitialImage = Nothing
         Me.picMainMenu.Location = New System.Drawing.Point(-11, -2)
         Me.picMainMenu.Name = "picMainMenu"
@@ -79,8 +67,7 @@ Partial Class StartMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(720, 555)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnLoad)
-        Me.Controls.Add(Me.btnNew)
+        Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.picMainMenu)
         Me.Name = "StartMenu"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -90,8 +77,7 @@ Partial Class StartMenu
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnNew As System.Windows.Forms.Label
-    Friend WithEvents btnLoad As System.Windows.Forms.Label
+    Friend WithEvents btnStart As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Label
     Friend WithEvents picMainMenu As System.Windows.Forms.PictureBox
 

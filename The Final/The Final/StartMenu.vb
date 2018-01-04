@@ -1,7 +1,9 @@
 ﻿Public Class StartMenu
 
-    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        Dim oForm As New frmInGame
+        oForm.Show()
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -14,7 +16,9 @@
         End If
     End Sub
 
-    Private Sub picMainMenu_Click(sender As Object, e As EventArgs) Handles picMainMenu.Click
-        'test
+    Private Sub StartMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' Will play game music ..
+        My.Computer.Audio.Play(My.Resources.RealityDistortion, AudioPlayMode.BackgroundLoop)
     End Sub
 End Class
