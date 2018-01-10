@@ -3,3 +3,6 @@ Here is the final project worked on in Brosius' Visual Basic class during the 2n
 
 # Flow Chart
 <img src="nice.jpg" alt="Final Flow Chart">
+
+# YouTube Video
+https://youtu.be/4Hnqp7S4iAA
